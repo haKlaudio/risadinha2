@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/principal.css">
+    <link rel="icon" href="icone.ico" type="image/x-icon">
+   
+    <title>RisadinhaFreelas - Principal</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="css/principal.css">
+    
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">RisadinhaFreelas</a>
+
+    <nav class="navbar">
+        <a href="index.html" class="active">Início</a>
+        <a href="sobre1.html">Sobre</a>
+        <a href="contatenos.html">Contate-nos</a>
+        <a href="perfil.html"><img src="css/icone.png" alt="" class="icone"></a>
+    </nav>
+</header>
+  
+<div class="container">
+  <div id="profile">
+    <img src="css/imagens/Pogo-filhote-em-The-Umbrella-Academy-Reproducao.jpg"Profile Picture">
+    <h2>Pogo Umbrella</h2>
+    <br>
+    <b><p>Web Desenvolvedor formado na UmbrellaAcademy</p></b>
+    <br><br>
+    <b><p>Especialista em Html | Css | JavaScript</p></b>
+  </div>
+
+  <div id="searchContainer">
+    <input type="text" id="searchBar" placeholder="Pesquisar...">
+    <ul id="results"></ul>
+  </div>
+</div>
+
+<script>const jobData = [
+  { title: 'Desenvolvedor Web', salary: '$60,000 - $80,000', location: 'Aracaju, SE', requirements: 'Experiência em HTML, CSS, JavaScript' },
+  { title: 'Designer Gráfico', salary: '$50,000 - $70,000', location: 'Laranjeiras, SE', requirements: 'Conhecimento em Photoshop, Illustrator' },
+  { title: 'Analista de Dados', salary: '$70,000 - $90,000', location: 'Belo Horizonte, MG', requirements: 'Experiência em SQL, Python' },
+  { title: 'Engenheiro de Software', salary: '$80,000 - $100,000', location: 'Lagarto, SE', requirements: 'Experiência em Java, Spring, REST' },
+  { title: 'Analista de Marketing Digital', salary: '$55,000 - $75,000', location: 'Fortaleza, CE', requirements: 'Conhecimento em SEO, SEM, Google Analytics' },
+  { title: 'Gerente de Projetos', salary: '$90,000 - $110,000', location: 'Salvador, BA', requirements: 'Certificação PMP, Experiência em gestão de equipe' },
+  { title: 'Especialista em Redes', salary: '$75,000 - $95,000', location: 'Curitiba, PR', requirements: 'Certificação CCNA, Experiência em configuração de roteadores' },
+  { title: 'Desenvolvedor Mobile', salary: '$70,000 - $90,000', location: 'Manaus, AM', requirements: 'Experiência em Flutter, React Native' },
+  { title: 'Analista Financeiro', salary: '$60,000 - $80,000', location: 'Porto Alegre, RS', requirements: 'Experiência em análise de dados financeiros, Excel avançado' },
+  { title: 'Arquiteto de Sistemas', salary: '$85,000 - $105,000', location: 'Recife, PE', requirements: 'Experiência em design de sistemas, arquitetura de software' },
+  { title: 'Especialista em Segurança da Informação', salary: '$95,000 - $115,000', location: 'Belém, PA', requirements: 'Certificação CISSP, Experiência em proteção contra ameaças cibernéticas' },
+  { title: 'Designer de UI/UX', salary: '$65,000 - $85,000', location: 'Florianópolis, SC', requirements: 'Experiência em design de interfaces, ferramentas como Sketch e Figma' },
+  { title: 'Analista de Suporte Técnico', salary: '$50,000 - $70,000', location: 'Natal, RN', requirements: 'Experiência em suporte a sistemas, habilidades de comunicação' }
+];
+
+// Função para exibir vagas com base na pesquisa
+function displayJobs(query) {
+  const resultsList = document.getElementById('results');
+  resultsList.innerHTML = '';
+
+  const filteredJobs = jobData.filter(job => job.title.toLowerCase().includes(query.toLowerCase()));
+
+  filteredJobs.forEach(job => {
+    const listItem = document.createElement('li');
+    listItem.className = 'resultItem';
+    listItem.innerHTML = `
+      <h3>${job.title}</h3>
+      <p><strong>Salário:</strong> ${job.salary}</p>
+      <p><strong>Onde Fica:</strong> ${job.location}</p>
+      <p><strong>Requisitos:</strong> ${job.requirements}</p>
+      <a href="#">Ir para vaga</a>
+    `;
+    resultsList.appendChild(listItem);
+  });
+}
+
+// Adicionar evento de input para atualizar os resultados ao digitar na barra de pesquisa
+const searchBar = document.getElementById('searchBar');
+searchBar.addEventListener('input', () => {
+  displayJobs(searchBar.value);
+});
+
+// Exibir todas as vagas inicialmente
+displayJobs('');</script>
+

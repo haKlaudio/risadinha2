@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/registro.css">
+    <link rel="icon" href="icone.ico" type="image/x-icon">
+
+    <title>RisadinhaFreelas - Registro</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">RisadinhaFreelas</a>
+
+        <nav class="navbar">
+            <a href="index.html" class="active">Início</a>
+            <a href="sobre1.html">Sobre</a>
+            <a href="contato1.html">Contate-nos</a>
+            <a href="perfil.html"><img src="css/icone.png" alt="" class="icone"></a>
+        </nav>
+    </header>
+</body>
+  <body>
+    <section class="container">
+      <header>Registre-se</header>
+      <form action="#" class="form">
+        <div class="input-box">
+          <label>Nome Completo</label>
+          <input type="text" placeholder="Nome completo" required />
+        </div>
+        <div class="input-box">
+          <label>Email de login</label>
+          <input type="text" placeholder="Email de login" id="login" required />
+        </div>
+        <div class="column">
+          <div class="input-box">
+            <label>Senha</label>
+            <input type="password" placeholder="Senha" id="senha" required />
+          </div>
+  
+        </div>
+        <div class="gender-box">
+          <h3>Gênero</h3>
+          <div class="gender-option">
+            <div class="gender">
+              <input type="radio" id="check-male" name="gender" checked />
+              <label for="check-male">Masculino</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-female" name="gender" />
+              <label for="check-female">Feminino</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-other" name="gender" />
+              <label for="check-other">Outro</label>
+            </div>
+          </div>
+        </div>
+        <div class="input-box address">
+          <label>Endereço</label>
+          <input type="text" placeholder="Ex. Rua Risadinha Freelas" required />
+          <div class="column">
+            <div class="select-box">
+              <select>
+                <option hidden>País</option>
+                <option>Argentina</option>
+                <option>Austrália</option>
+                <option>Brasil</option>
+                <option>Estados Unidos</option>
+                
+              </select>
+            </div>
+            <input type="text" placeholder="Cidade" required />
+          </div>
+          <div class="column">
+            <input type="text" placeholder="Estado" required />
+            <input type="number" placeholder="Cep" required />
+          </div>
+        </div>
+        <button type="button" onclick="logar()">Registrar</button>
+      </form>
+    </section>
+    <script>
+      
+      
+      function logar() {
+      var login = document.getElementById('login').value;
+      var senha = document.getElementById('senha').value;
+
+  
+      if (login && senha) {
+        alert('Registrado com sucesso para o login: ' + login + ' e senha: ' + senha);
+
+       
+        location.href = "principal.html";
+      } else {
+        alert('Por favor, preencha todos os campos.');
+      }
+    }
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Poppins:wght@200;300&family=Roboto:ital,wght@0,100;1,100&family=Sora:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background-image: url(dada.webp);
+  background-repeat: no-repeat;
+  background-size: 100%;
+    font-family: Poppins, sans-serif;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+
+
+}
+
+a{
+  color: #f09b19;
+}
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background-color: transparent;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  transition: 0.5s;
+}
+
+.logo{
+  background: linear-gradient(45deg, #ff8a00, #e7ddbf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.navbar a {
+  font-size: 20px;
+  color: #e7ddbf;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: .3s;
+
+}
+
+.navbar a:hover, 
+.navbar a.active {
+
+  color: #f09b19; 
+}
+
+.container {
+  display: flex;
+  width: 1300px;
+  height: 70%;
+  border: 3px solid #f09b19;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#profile {
+  width: 300px; /* Largura fixa para a coluna do perfil */
+  padding: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+#profile img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 30px;
+}
+
+#searchContainer {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  
+}
+
+#searchBar {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#results {
+  list-style-type: none;
+  padding: 0;
+  overflow-y: auto; /* Adicionado para permitir rolar a lista de resultados */
+}
+
+.resultItem {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
